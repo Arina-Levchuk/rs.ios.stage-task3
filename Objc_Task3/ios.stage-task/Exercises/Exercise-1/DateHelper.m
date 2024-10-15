@@ -15,7 +15,13 @@
 #pragma mark - Second
 
 - (long)dayFromDate:(NSString *)date {
-    return 0;
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZ";
+    NSDate *dateFromString = [dateFormatter dateFromString:date];
+
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:dateFromString];
+
+    return dateComponents.day;
 }
 
 #pragma mark - Third
