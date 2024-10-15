@@ -27,7 +27,12 @@
 #pragma mark - Third
 
 - (NSString *)getDayName:(NSDate*) date {
-    return nil;
+    NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday fromDate:date];
+    
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ru"];
+    
+    return dateFormatter.shortWeekdaySymbols[dateComponents.weekday - 1];;
 }
 
 #pragma mark - Fourth
