@@ -24,6 +24,7 @@
 		82ADF97926558D7700D81DB7 /* LexicographicallyMinimalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ADF97626558D7700D81DB7 /* LexicographicallyMinimalTests.m */; };
 		82ADF97D26566AC400D81DB7 /* DateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ADF97C26566AC400D81DB7 /* DateHelper.m */; };
 		82ADF97F26566ACF00D81DB7 /* DateHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ADF97E26566ACF00D81DB7 /* DateHelperTests.m */; };
+		8CC757DC2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC757DB2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		82ADF97B26566AC400D81DB7 /* DateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateHelper.h; sourceTree = "<group>"; };
 		82ADF97C26566AC400D81DB7 /* DateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelper.m; sourceTree = "<group>"; };
 		82ADF97E26566ACF00D81DB7 /* DateHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelperTests.m; sourceTree = "<group>"; };
+		8CC757D92CC00A6700FA10B2 /* NSMutableArray+QueueLinear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueLinear.h"; sourceTree = "<group>"; };
+		8CC757DB2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueLinear.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				82ADF96B26558D6A00D81DB7 /* LexicographicallyMinimal.pdf */,
 				82ADF96C26558D6A00D81DB7 /* LexicographicallyMinimal.h */,
 				82ADF96D26558D6A00D81DB7 /* LexicographicallyMinimal.m */,
+				8CC757D92CC00A6700FA10B2 /* NSMutableArray+QueueLinear.h */,
+				8CC757DB2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m */,
 			);
 			path = "Exercise-3";
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				8293ECA826346C7100CEE768 /* AppDelegate.m in Sources */,
 				8293ECB926346C7500CEE768 /* main.m in Sources */,
 				82ADF96626558D6400D81DB7 /* LevelOrderTraversal.m in Sources */,
+				8CC757DC2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m in Sources */,
 				82ADF97326558D7000D81DB7 /* PlayersSeparator.m in Sources */,
 				820FABBD26567D60008CFD09 /* NSDate+CustomDate.m in Sources */,
 				82ADF97D26566AC400D81DB7 /* DateHelper.m in Sources */,
