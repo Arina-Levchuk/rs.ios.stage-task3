@@ -14,6 +14,7 @@
     NSMutableArray *charsFromString2Array = [NSMutableArray arrayWithCapacity:string2.length];
     NSMutableString *resultString = [NSMutableString string];
     
+    // TODO: make a Block to generate array from given string
     for (int i = 0; i < string1.length; i++) {
         [charsFromString1Array addObject:[NSString stringWithFormat:@"%C", [string1 characterAtIndex:i]]];
     }
