@@ -26,6 +26,7 @@
 		82ADF97F26566ACF00D81DB7 /* DateHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82ADF97E26566ACF00D81DB7 /* DateHelperTests.m */; };
 		8C71ACD92CC81A0D00A7619B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		8C71ACDC2CC8234100A7619B /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C71ACDB2CC8234100A7619B /* TreeNode.m */; };
+		8C71ACDF2CC9835500A7619B /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C71ACDE2CC9835500A7619B /* BinaryTree.m */; };
 		8CC757DC2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC757DB2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		82ADF97E26566ACF00D81DB7 /* DateHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateHelperTests.m; sourceTree = "<group>"; };
 		8C71ACDA2CC8234100A7619B /* TreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		8C71ACDB2CC8234100A7619B /* TreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
+		8C71ACDD2CC982E300A7619B /* BinaryTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		8C71ACDE2CC9835500A7619B /* BinaryTree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		8CC757D92CC00A6700FA10B2 /* NSMutableArray+QueueLinear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+QueueLinear.h"; sourceTree = "<group>"; };
 		8CC757DB2CC00AEB00FA10B2 /* NSMutableArray+QueueLinear.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+QueueLinear.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +145,8 @@
 				82ADF95F26558D6400D81DB7 /* LevelOrderTraversal.m */,
 				8C71ACDA2CC8234100A7619B /* TreeNode.h */,
 				8C71ACDB2CC8234100A7619B /* TreeNode.m */,
+				8C71ACDD2CC982E300A7619B /* BinaryTree.h */,
+				8C71ACDE2CC9835500A7619B /* BinaryTree.m */,
 			);
 			path = "Exercise-4";
 			sourceTree = "<group>";
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C71ACDF2CC9835500A7619B /* BinaryTree.m in Sources */,
 				82ADF96F26558D6A00D81DB7 /* LexicographicallyMinimal.m in Sources */,
 				8293ECA826346C7100CEE768 /* AppDelegate.m in Sources */,
 				8293ECB926346C7500CEE768 /* main.m in Sources */,

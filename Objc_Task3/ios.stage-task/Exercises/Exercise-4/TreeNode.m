@@ -13,8 +13,8 @@
     self = [super init];
     if (self) {
         _value = value;
-        _left = nil;
-        _right = nil;
+        _left = NULL;
+        _right = NULL;
     }
     
     return self;

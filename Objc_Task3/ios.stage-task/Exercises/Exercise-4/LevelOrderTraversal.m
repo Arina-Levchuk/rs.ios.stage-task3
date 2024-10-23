@@ -1,46 +1,44 @@
 #import "LevelOrderTraversal.h"
 #import "NSMutableArray+QueueLinear.h"
 #import "TreeNode.h"
+#import "BinaryTree.h"
 
 NSArray *LevelOrderTraversalForTree(NSArray *tree) {
     NSMutableArray *levelOrderTraversalResult = [NSMutableArray array];
     
     if (!tree || tree.count == 0 || tree[0] == [NSNull null]) {
-        return levelOrderTraversalResult;
+        return @[];
     }
     
-    // create Tree
-    NSMutableArray *nodesTree = [NSMutableArray array];
+    BinaryTree *binaryTree = [[BinaryTree alloc] init];
+    TreeNode *root = [binaryTree buildBinaryTree:tree];
     
-    TreeNode *root = [[TreeNode alloc] initWithValue:tree[0]];
-    [nodesTree addObject:root];
+    NSMutableArray *queue = [NSMutableArray array];
+    [queue addObject:root];
     
-    TreeNode *currentNode = [nodesTree removeAndReturnFirstObject];
-    int index = 1;
-    while (index < tree.count) {
-        if (index < tree.count && tree[index] != [NSNull null]) {
-            currentNode.left = [[TreeNode alloc] initWithValue:tree[index]];
-            [nodesTree addObject:currentNode.left];
-        }
-        index++;
-
-        if (index < tree.count && tree[index] != [NSNull null]) {
-                currentNode.right = [[TreeNode alloc] initWithValue:tree[index]];
-                [nodesTree addObject:currentNode.right];
-        }
-        index++;
+    while (queue.count != 0) {
+        int size = queue.count;
+        NSMutableArray *levelArray = [NSMutableArray array];
         
-        if ([nodesTree removeAndReturnFirstObject]) {
-            currentNode = [nodesTree removeAndReturnFirstObject];
+        for (int i = 0; i < size; i++) {
+            TreeNode *currentNode = [queue removeAndReturnFirstObject];
+            
+            if (currentNode.value) {
+                [levelArray addObject:currentNode.value];
+            }
+            
+            if (currentNode.left) {
+                [queue addObject:currentNode.left];
+            }
+            if (currentNode.right) {
+                [queue addObject:currentNode.right];
+            }
+        }
+        
+        if (levelArray.count > 0) {
+            [levelOrderTraversalResult addObject:levelArray];
         }
     }
-    [nodesTree addObject:root];
     
-    
-    
-    for (id node in tree) {
-        //        TreeNode *node =
-    }
-    
-    return levelOrderTraversalResult;
+    return [levelOrderTraversalResult copy];
 }
