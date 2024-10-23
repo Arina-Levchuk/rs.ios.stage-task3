@@ -10,35 +10,32 @@
 @implementation LexicographicallyMinimal
 
 -(NSString *)findLexicographicallyMinimalForString1:(NSString *)string1 andString2:(NSString *)string2 {
-    NSMutableArray *charsFromString1Array = [NSMutableArray arrayWithCapacity:string1.length];
-    NSMutableArray *charsFromString2Array = [NSMutableArray arrayWithCapacity:string2.length];
     NSMutableString *resultString = [NSMutableString string];
     
-    // TODO: make a Block to generate array from given string
-    for (int i = 0; i < string1.length; i++) {
-        [charsFromString1Array addObject:[NSString stringWithFormat:@"%C", [string1 characterAtIndex:i]]];
+    NSUInteger index1 = 0;
+    NSUInteger index2 = 0;
+    
+    while (index1 < string1.length && index2 < string2.length) {
+        unichar char1 = [string1 characterAtIndex:index1];
+        unichar char2 = [string2 characterAtIndex:index2];
+        
+        if (char1 <= char2) {
+            [resultString appendFormat:@"%C", char1];
+            index1++;
+        } else {
+            [resultString appendFormat:@"%C", char2];
+            index2++;
+        }
     }
     
-    for (int i = 0; i < string2.length; i++) {
-        [charsFromString2Array addObject:[NSString stringWithFormat:@"%C", [string2 characterAtIndex:i]]];
+    while (index1 < string1.length) {
+        [resultString appendFormat:@"%C", [string1 characterAtIndex:index1]];
+        index1++;
     }
     
-    while (charsFromString1Array.count > 0 && charsFromString2Array.count > 0) {
-        NSComparisonResult comparisonResult = [charsFromString1Array[0] compare:charsFromString2Array[0]];
-        
-        NSString *letter = (comparisonResult == NSOrderedAscending || comparisonResult == NSOrderedSame) ?
-        [charsFromString1Array removeAndReturnFirstObject] :
-        [charsFromString2Array removeAndReturnFirstObject];
-        
-        [resultString appendFormat:@"%@", letter];
-        
-        NSLog(@"%@", resultString);
-    }
-    
-    if (charsFromString1Array.count > 0) {
-        [resultString appendFormat:@"%@", [charsFromString1Array componentsJoinedByString:@""]];
-    } else if (charsFromString2Array.count > 0) {
-        [resultString appendFormat:@"%@", [charsFromString2Array componentsJoinedByString:@""]];
+    while (index2 < string2.length) {
+        [resultString appendFormat:@"%C", [string2 characterAtIndex:index2]];
+        index2++;
     }
     
     return resultString;
